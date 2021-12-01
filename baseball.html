@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Baseball</title>
+    <link rel="shortcut icon" href="games/baseball/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="games/baseball/TemplateData/style.css">
+    <script src="games/baseball/TemplateData/UnityProgress.js"></script>
+    <script src="games/baseball/Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "games/baseball/Build/20190110.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">HyperrealisticBaseball</div>
+      </div>
+    </div>
+	<p>A hyperrealistic game where you play as a baseball player with an animal companion(cat) trying to bat off a fox on his face but ends up propelling himself upwards. Predecessor of <a href="https://spectralharp.itch.io/hyperrealistic-baseball-ii">Hyperrealistic Baseball II</a></p>
+	<p>Controls: Smash "A"</p>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+  By: Chao Hsu Lin
+  Date: 11-23-2018
+
+  Lints CSS files
+-->
+
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Lint</title>
+    <link href="styles/csslint.css" rel="stylesheet">
+
+    <script src="scripts/csslint.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/ruleset.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/csslint-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/editor.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Lint</h1>
+    </header>
+    <main>
+      <div id="editor"></div>
+      <section id="output" class="output">
+        <button id="run-lint" disabled>Run CSSLint</button>
+        <!--<div class="option">
+          <input type="checkbox">
+          <label>Format CSS if there are no parsing error</label>
+        </div>-->
+        <!-- Result for W3C Validator -->
+        <div class="category" id="w3c">
+          <!-- W3C Validator Header -->
+          <div class="category-header">
+            <h2>W3C Validator Test</h2>
+          </div>
+          <!-- W3C Validator Content -->
+        </div>
+        <!-- Result for CSE 154 Rules -->
+        <div class="category" id="cse154">
+          <!-- CSE 154 Rules Header -->
+          <div class="category-header">
+          <h2>CSE 154 Rules</h2>
+          </div>
+          <!-- CSE 154 Rules Content -->
+        </div>
+      <section>
+    </main>
+    <footer>
+      <!-- Nicholas C. Zakas is OP -->
+      <a href="http://csslint.net/">CSSLint</a> by Nicholas C. Zakas.
+      <a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a> by W3C.
+    </footer>
+    <script src="scripts/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
+
+<!-- For testing CSS
+<div class="result-content">
+  <div class="result-header warning">
+    <h3>Warning</h3>
+  </div>
+  <ul>
+    <li>
+      <strong>line 9:</strong>
+      <span class="error-type">unsupported-import</span>
+      <p>Imported style sheets are not checked in direct input and file upload modes</p>
+    </li>
+    <li>
+      <strong>line 9:</strong>
+      <span class="error-type">unsupported-import</span>
+      <p>Imported style sheets are not checked in direct input and file upload modes</p>
+    </li>
+  </ul>
+</div>
+-->

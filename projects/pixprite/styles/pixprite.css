@@ -1,0 +1,305 @@
+/*
+    Name: Chao Hsu Lin
+    Date: 11-30-2018
+    Section: CSE 154 AI
+
+    This is the style sheet for Pixprite
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Open+Sans');
+
+/* General style */
+
+body {
+  background-color: #cbe545;
+}
+
+header {
+  height: 20vh;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+h1, h2, h3, p, .message-box {
+  text-align: center;
+}
+
+h1, h2, h3, p {
+  font-family: "Press Start 2P", sans-serif;
+}
+
+h1, h2 {
+  text-shadow: 4px 4px 0 #14cc80;
+  color: #283b73;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+input, button {
+  border: none;
+}
+
+.box, .pallete-tile {
+  box-sizing: border-box;
+}
+
+/* This clips the background color inside the border */
+.box, .setting-area, .pallete-area, .message-box {
+  background-clip: padding-box;
+}
+
+label, button, .message-box {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+
+label, .big-button {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  color: black;
+}
+
+input[type=text] {
+  font-size: 15px;
+  padding: 5px;
+}
+
+/* Why is the checkbox so tiny anyways? */
+
+input[type=checkbox] {
+  transform: scale(2);
+}
+
+/* Button Styling */
+
+button {
+  background-color: #15788c;
+  min-width: 150px;
+  transition: background-color 0.2s;
+}
+
+button:disabled {
+  background-color: #283b73;
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+  background-color: #14cc80;
+  cursor: pointer;
+}
+
+#set-color {
+  font-size: 16px;
+  padding: 8px;
+}
+
+.big-button {
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* Pallete Styling */
+
+/*
+  Might add custom cursor in future (like a pen or something)
+  hence the duplicate rule
+*/
+.pallete-tile, .box {
+  cursor: pointer;
+}
+
+.pallete {
+  width: 350px;
+}
+
+.pallete-tile {
+  margin: 5px;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #283b73;
+}
+
+.selected {
+  border-style: solid;
+  background-image: url("../images/pallete_marker.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 50%;
+}
+
+.color-option {
+  margin: 20px 0;
+}
+
+/* Grid Styling */
+
+.grid {
+  flex-flow: wrap;
+  align-content: flex-start;
+  height: 240px;
+  width: 240px;
+  border: 8px solid #283b73;
+}
+
+.show-border .box {
+  border: 1px solid transparent;
+}
+
+.box {
+  background-color: white;
+  height: 30px;
+  width: 30px;
+}
+
+.box:hover {
+  border: 1px solid #15788c;
+}
+
+/* Area Styling */
+
+.main-section {
+  min-height: 80vh;
+  justify-content: space-around;
+}
+
+.drawing-area {
+  height: auto;
+  justify-content: space-evenly;
+}
+
+.setting-area, .pallete-area {
+  border: 8px solid #3fe975;
+  background-color: #3fe975;
+  border-style: dashed;
+  padding: 20px;
+  margin: 30px;
+}
+
+.option-item input[type=text] {
+  width: 100%;
+}
+
+/* Showcase Styling */
+
+.showcase {
+  margin: 0 50px;
+}
+
+#canvas-container {
+  width: 90%;
+  justify-content: space-between;
+}
+
+canvas {
+  border: 2px solid black;
+}
+
+/* Message Styling */
+
+.message-box {
+  position: fixed;
+  left: 50%;
+  bottom: 5px;
+  width: 50%;
+  padding: 12px;
+  transform: translate(-50%, 0);
+  border: 2px dashed;
+}
+
+/*
+  I want to be able to style this seperate from the button,
+  hence the duplicate style
+*/
+.message-success {
+  background-color: #15788c;
+  border-color: #15788c;
+}
+
+.message-fail {
+  background-color: #FF5983;
+  border-color: #FF5983;
+}
+
+/* Utility */
+
+.hidden {
+  display: none;
+}
+
+.invalid {
+  box-shadow: 0 0 5px red;
+  background-color: #ffcece;
+  animation-name: shake;
+  animation-duration: 0.2s;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.wobble {
+  animation-name: wobble;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+/* Flex styles */
+
+.flex-row, .flex-column {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+  align-items: center;
+}
+
+.pallete, .drawing-area, #canvas-container {
+  flex-wrap: wrap;
+}
+
+/* Animation */
+
+@keyframes wobble {
+  0% {
+    transform: rotateZ(-1deg);
+  }
+
+  100% {
+    transform: rotateZ(1deg);
+  }
+}
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+/*
+ *  (\__/)
+ *  (•ㅅ•)
+ */

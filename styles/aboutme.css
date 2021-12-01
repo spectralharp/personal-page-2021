@@ -1,0 +1,177 @@
+/*
+    (\__/)
+    (•ㅅ•)
+*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+/*General Styling*/
+* {
+  /*
+    Using universal selector to reset the CSS properties to get rid of a weird
+    blank space at the top of the page
+  */
+  padding: 0;
+  margin: 0;
+  /*
+    Include element padding and border in the width and height to make sizes
+    more intuitive, thank you w3Schools
+  */
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 8em;
+}
+
+h2 {
+  font-size: 3em;
+  padding: 2% 0%;
+}
+
+h3 {
+  font-size: 2em;
+  padding: 1% 0%;
+}
+
+p, li {
+  font-size: 1.5em;
+  padding: 1% 0%;
+}
+
+ol, ul {
+  padding: 5%;
+}
+
+section, header, footer {
+  /*
+    I want section to be the most generic block
+    overriding some padding and height in header and footer
+  */
+  background-color: #182c46;
+  color: #e5f5f6;
+  font-family:  'Lato', Helvetica, sans-serif;
+  height: 100vh;
+  padding: 5% 5%;
+}
+
+header {
+  background-image: url("../images/background.png");
+  background-repeat: repeat-x;
+  background-size: cover;
+  padding: 10% 5%;
+}
+
+header p {
+  padding-right: 50%;
+}
+
+header h1+p {
+  /*
+    Should probably use a span with class instead but I wanted to try out
+    the + selector thing
+  */
+  font-size: 2em;
+  font-weight: bold;
+}
+
+footer {
+  height: 6vh;
+  padding: 1%;
+}
+
+footer p {
+  font-size: 1em;
+  padding: 0;
+  text-align: center;
+}
+
+/*Normal links*/
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #82b4ff;
+}
+
+a:visited {
+  color: #3c8aff;
+}
+
+/*Button links*/
+.button {
+  background-color: #82b4ff;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0 2% 0 0;
+}
+
+.button a:link, .button a:visited {
+  color: white;
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 8px 40px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #3c8aff;
+}
+
+/*About section*/
+#bio {
+  /*
+    To get the horizontal layout
+  */
+  display: flex;
+}
+
+.bioItem {
+  background-color: #e5f5f6;
+  border-radius: 10px;
+  margin: 5% 1%;
+  padding: 2.5%;
+  width: 30%;
+}
+
+.bioItem h2 {
+  color: #182c46;
+  font-size: 2em;
+}
+
+.bioItem li {
+  color: #182c46;
+  font-size: 1.5em;
+}
+
+/*Project section*/
+.project {
+  background-color: #e5f5f6;
+  border-radius: 10px;
+  list-style-type: none;
+  margin: 2% 0;
+  padding: 2%;
+}
+
+.project h2 {
+  color: #182c46;
+  font-size: 2.5em;
+  padding: 0 0;
+}
+
+.project p {
+  color: #182c46;
+  font-size: 1.5em;
+}
+
+/*Image styling*/
+#moon {
+  float: right;
+  position: relative;
+  width: 25%;
+  left: -50px;
+  bottom: 450px;
+}
+
+#moon404 {
+  height: 150px;
+}

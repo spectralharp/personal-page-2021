@@ -1,0 +1,200 @@
+/*
+    Name: Chao Hsu Lin
+    Date: 11-01-18
+    Section: CSE 154 AI
+
+    This is the style sheet for index.html
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Bungee|Lato');
+
+/* General Styling */
+
+body {
+  background-color: #fff45e;
+}
+
+body, h1, h2 {
+  margin: 0;
+}
+
+h1, h2, p, footer {
+  color: #ffa851;
+}
+
+h1, h2, footer{
+  font-family: "Bungee", sans-serif;
+  text-align: center;
+}
+
+input, button, p{
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 10px;
+  line-height: 1.6;
+}
+
+header {
+  max-width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Flex Styling */
+
+main, #button-list, #main-view {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  flex-flow: column;
+  justify-content: center;
+}
+
+#button-list {
+  justify-content: center;
+}
+
+#main-view {
+  justify-content: space-evenly;
+}
+
+/* Canvas & Pokedex Styling */
+
+canvas, article {
+  border-radius: 10px;
+  background-color: #fff6d8;
+  border: 5px solid #ffa851;
+}
+
+canvas {
+  cursor: pointer;
+}
+
+article {
+  width: 300px;
+  height: 300px;
+  padding: 1%;
+  margin: 50px;
+}
+
+/* Berry container styling */
+
+.berry {
+  width: 50px;
+  height: 50px;
+
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  animation-name: fade-out;
+  animation-delay: 5s;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+
+
+/* Button & Input Styling */
+
+input, button {
+  padding: 10px;
+  margin: 0.5%;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  background-color: #ffa851;
+  font-size: 1.1em;
+  min-width: 150px;
+  padding: 10px;
+  margin: 1%;
+  color: white;
+}
+
+button:disabled {
+  background-color: #c1a985;
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+  background-color: #ff952b;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Other Styling */
+
+.wobble {
+  animation-name: wobble;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.invalid {
+  box-shadow: 0 0 5px red;
+  background-color: #ffcece;
+  animation-name: shake;
+  animation-duration: 0.2s;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* Animation */
+
+@keyframes wobble {
+  0% {
+    transform: rotateZ(-1deg);
+  }
+
+  100% {
+    transform: rotateZ(1deg);
+  }
+}
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/*
+(\__/)
+(•ㅅ•)
+*/

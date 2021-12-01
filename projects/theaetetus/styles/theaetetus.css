@@ -1,0 +1,220 @@
+/*
+    Name: Chao Hsu Lin
+    Date: 11-14-18
+    Section: CSE 154 AI
+
+    This is the style sheet for index.html
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Lato');
+
+/* General Style */
+
+header {
+  height: 100vh;
+}
+
+header, main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 10%;
+  background-image: linear-gradient(#18D5FF, #98E9AF, #18D5FF);
+  background-size: 100% 200%;
+
+  animation-name: changing-gradient;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+footer {
+  padding: 20px;
+}
+
+h1, h2, h3, blockquote, button, p, footer {
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  color: white;
+}
+
+
+h1 {
+  font-size: 80px;
+  text-shadow: 0 0 20px #ffffff94;
+
+  margin: 0;
+
+  animation-name: pulsing;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+h2 {
+  font-size: 40px;
+  text-shadow: 0 0 20px #ffffff94;
+}
+
+h3 {
+  margin: 0 0 30px 0;
+}
+
+blockquote {
+  margin: 10% 0;
+  font-size: 1.5em;
+}
+
+p {
+  margin: 50px 0;
+  line-height: 1.6;
+}
+
+/* Documentation Section Style */
+
+#document, #document div {
+  background-color: #00000050;
+}
+
+#document {
+  margin: 5% 0;
+  padding: 5%;
+  font-size: 22px;
+  border-radius: 10px;
+}
+
+#document div {
+  margin: 30px auto;
+  padding: 25px;
+
+  width: 85%;
+  border-radius: 50px 5px;
+}
+
+#document div p {
+  text-align: left;
+  margin: 10px;
+
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+}
+
+/* Button Style */
+
+button {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  color: white;
+  font-size: 25px;
+  border: none;
+  border-radius: 10px;
+
+  background-color: #4a7284;
+}
+
+button:hover {
+  background-color: #669eb7;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Try Section Style */
+
+#try-input {
+  margin: 0;
+
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+
+  font-size: 20px;
+}
+
+#try-input button, input, label {
+  border-radius: 0;
+  border: none;
+  margin: 0;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+
+#try-input button {
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+
+  border-radius:  0 5px 0 0;
+
+  width: 10%;
+}
+
+input {
+  border-top: 1px solid gray;
+  width: auto;
+  flex: 1 0 auto;
+}
+
+label {
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+
+  border-radius:  5px 0 0 0;
+
+  display: block;
+  background-color: #e5e5e5;
+  margin: 0;
+}
+
+textarea {
+  box-sizing: border-box;
+
+  border-radius: 0 0 5px 5px;
+
+  height: 500px;
+  width: 100%;
+
+  padding: 16px;
+
+  font-size: 18px;
+
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+/* Animation Style */
+
+@keyframes pulsing {
+  0%, 100% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 20px white;
+  }
+}
+
+@keyframes changing-gradient {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% 200%;
+  }
+}
+
+/*
+(\__/)
+(•ㅅ•)
+*/

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #222;
+  background-color: #fdfdfd;
+  padding-top: 56px;
+}
+
+#top {
+  position: absolute;
+  top: -56px;
+}
+
+span.highlight {
+  background-color: #fffa94;
+}
+
+th, td {
+  padding: 10px;
+}
+
+td.slide {
+  width: 470px;
+  max-width: 470px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.cell-text-container {
+  height: 300px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#slide-modal-content .cell-text-container {
+  max-height: 60vh;
+  height: 60vh;
+}
+
+.slide h1 {
+  font-size: 14pt !important;
+}
+
+.slide h2 {
+  font-size: 12pt !important;
+}
+
+.slide h3 {
+  font-size: 10pt !important;
+}
+
+.slide > button {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.slide h4,
+.slide p,
+.slide code,
+.slide pre,
+.slide a,
+.slide table,
+.slide li,
+.slide input,
+.slide .cell-text-container button,
+.slide blockquote,
+.slide form,
+.slide label,
+.slide font {
+  font-size: 8pt !important;
+}
+
+.slide img {
+  height: auto !important;
+  width: 20% !important;
+}
+
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+   max-width:1200px;
+  }
+}

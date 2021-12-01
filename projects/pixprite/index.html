@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+    Name: Chao Hsu Lin
+    Date: 11-16-2018
+    Section: CSE 154 AI
+
+    Pixprite is a online pixel art editor with a simple interface
+    Users can store their artwork in an online database
+-->
+<html lang="en">
+
+<head>
+  <title>Pixprite</title>
+  <link rel="stylesheet" href="styles/pixprite.css">
+  <script src="scripts/canvas.js"></script>
+</head>
+
+<body class="no-margin">
+  <header class="flex-column">
+    <h1 class="no-margin wobble">Pixprite</h1>
+  </header>
+  <main>
+    <!-- Main Drawing Canvas Area -->
+    <section class="main-section flex-column">
+      <div class="drawing-area flex-row">
+        <div class="setting-area">
+          <div class="option-item">
+            <label>Name</label>
+            <input type="text" id="art-name" maxlength=32 pattern="^[\w ]+$" required>
+          </div>
+          <div class="option-item">
+            <label>Private</label>
+            <input type="checkbox" id="art-private">
+          </div>
+          <div id="password" class="option-item hidden">
+            <label>Password</label>
+            <input type="text" id="art-password" minlength=4 pattern="^[\w@!#\?%\-\+]+$" maxlength=32 required>
+          </div>
+          <button id="save-art" class=" big-button">Save Artwork</button>
+          <button id="get-art" class=" big-button">Get Artwork</button>
+        </div>
+
+        <div id="grid" class="grid flex-row">
+        </div>
+
+        <div class="pallete-area">
+          <div id="pallete" class="pallete flex-row">
+          </div>
+          <div class="color-option flex-row">
+            <!--Color Input-->
+            <input type="text" id="color-input" maxlength="7" pattern="^#?[A-Fa-f\d]{6}$" value="#FFFFFF">
+            <button id="set-color">Set Color</button>
+          </div>
+          <div class="option-item">
+            <label>Show Pixel Grid</label>
+            <input type="checkbox" id="show-border">
+          </div>
+        </div>
+      </div>
+      <h2>vv See what other people made! vv</h2>
+    </section>
+    <!-- Showcase Area -->
+    <section id="showcase-container" class="flex-column">
+      <h2>Artwork Showcase!</h2>
+      <div id="canvas-container" class="flex-row"></div>
+      <button id="show-more" class=" big-button">Show More!</button>
+    </section>
+    <!-- Message Box -->
+    <div id="message-box" class="message-box hidden">
+      No Message
+    </div>
+  </main>
+  <footer>
+    <p>
+      See something weird? Contact chao0226 at uw.edu
+    </p>
+  </footer>
+</body>
+
+</html>
+<!--
+    (\__/)
+    (•ㅅ•)
+-->

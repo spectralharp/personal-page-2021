@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+    Name: Chao Hsu Lin
+    Date: 11-16-2018
+    Section: CSE 154 AI
+
+    This is the information page for Wise Words From Theaetetus, a web service that allows
+    anyone to easily get lines from the Theaetetus.
+-->
+<html>
+
+<head>
+  <title>Wise Words From Theaetetus</title>
+  <link rel="stylesheet" href="styles/theaetetus.css">
+  <script src="scripts/theaetetus.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Wise Words From Theaetetus</h1>
+    <blockquote id="quote">"Very true, Socrates." - Theaetetus</blockquote>
+    <button id="quote-btn">Get another quote</button>
+  </header>
+  <main>
+    <section id="document">
+      <h2>What is this?</h2>
+      <p>
+        <strong>Wise Words From Theaetetus</strong>
+        is a web service for all your Theaetetus quoting needs.
+      </p>
+      <p>
+        I thought it would be funny to have a Theaetetus quote generater because most of the time
+        Theaetetus would say something like "Very true, Socrates" after Socrates talked for 5
+        minute about how he's like a midwife for your brain. I don't think it turned out to be as
+        funny as I thought it would be but hopefully it would be useful for someone.
+      </p>
+      <h2>How do I use this?</h2>
+      <p>
+        All query parameters are optional. If no parameter is set, the request would return all
+        lines in the Theaetetus
+      </p>
+      <div>
+        <h3>Query 1: Retrieve lines from a certain speaker</h3>
+        <p>
+          <strong>Request Format:</strong>
+          theaetetus.php?speaker={name}
+        </p>
+        <p>
+          <strong>Request Type:</strong>
+          GET
+        </p>
+        <p>
+          <strong>Returned Data Format:</strong>
+          JSON
+        </p>
+        <p>
+          <strong>Description:</strong>
+          This request takes any speaker in the Theaetetus as a parameter and returns all
+          lines spoken by the speaker.
+        </p>
+      </div>
+      <div>
+        <h3>Query 2: Get lines that contain a certain word</h3>
+        <p>
+          <strong>Request Format:</strong>
+          theaetetus.php?contain={word}
+        </p>
+        <p>
+          <strong>Request Type:</strong>
+          GET
+        </p>
+        <p>
+          <strong>Returned Data Format:</strong>
+          JSON
+        </p>
+        <p>
+          <strong>Description:</strong>
+          This request takes a word as a parameter and returns all lines under that contains
+          the word.
+        </p>
+      </div>
+      <div>
+        <h3>Query 3: Retrieve lines under than a certain character count</h3>
+        <p>
+          <strong>Request Format:</strong>
+          theaetetus.php?char_limit={number}
+        </p>
+        <p>
+          <strong>Request Type:</strong>
+          GET
+        </p>
+        <p>
+          <strong>Returned Data Format:</strong>
+          JSON
+        </p>
+        <p>
+          <strong>Description:</strong>
+          This request takes a character count as a parameter and returns all lines under
+          than the character count.
+        </p>
+      </div>
+      <div>
+        <h3>Query 4: Retrieve a random line</h3>
+        <p>
+          <strong>Request Format:</strong>
+          theaetetus.php?mode=random_quote
+        </p>
+        <p>
+          <strong>Request Type:</strong>
+          GET
+        </p>
+        <p>
+          <strong>Returned Data Format:</strong>
+          plain text
+        </p>
+        <p>
+          <strong>Description:</strong>
+          This request returns a random line from all lines that matches other query
+          parameters in a formatted string ("{dialogue}" - {speaker})
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Try it here!</h2>
+      <div>
+        <div id="try-input">
+          <label>https://students.washington.edu/chao0226/theaetetus.php</label>
+          <input type="text" value="?speaker=theaetetus" id="php-param">
+          <button id="try-btn">Submit</button>
+        </div>
+        <textarea id="try-output"></textarea>
+      </div>
+    </section>
+  </main>
+  <footer>
+     Website © 2018 Chao Hsu Lin. Theaetetus data used under the license of Project Gutenberg:
+     www.gutenberg.org.
+  </footer>
+</body>
+
+</html>
+<!--
+    (\__/)
+    (•ㅅ•)
+-->

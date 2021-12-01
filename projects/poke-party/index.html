@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+     Name: Chao Hsu Lin
+     Date: 11-01-18
+     Section: CSE 154 AI
+
+     This is Poke Party, the bouncy pokedex that no one asked for
+-->
+
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Poke Party: Bouncy Pokedex!</title>
+    <script src="scripts/poke-party.js"></script>
+    <link href="styles/poke-party.css" rel="stylesheet">
+  </head>
+  <body class="rainbow">
+    <header>
+      <h1 class="wobble">Poke Party!</h1>
+    </header>
+    <main>
+        <div id="main-view">
+          <canvas id="canvas" width="500" height="400">
+          </canvas>
+          <article id="pokedex">
+            <h2 id="pokemonName">
+              Pokedex
+            </h2>
+            <p id="pokedexEntry">
+              Click on a pokemon to learn about them!
+              <br>
+              Double click to remove a pokemon!
+            </p>
+          </article>
+        </div>
+        <p>You Have <span id="berry-count">0</span> berries</p>
+        <input type="text" placeholder="Enter a Pokemon!" value="" id="pokemon-input">
+        <div id="button-list">
+          <button type="button" id="unselect-btn" disabled>Unselect'em All!</button>
+          <button type="button" id="generate-btn">Get Partying!</button>
+          <button type="button" id="delete-btn" disabled>Catch'em All!</button>
+          <button type="button" id="feed-btn" class="hidden" disabled>Feed Berry!</button>
+        </div>
+
+    </main>
+    <footer><p>Pokémon and Pokémon character names are trademarks of Nintendo</p></footer>
+
+  </body>
+</html>

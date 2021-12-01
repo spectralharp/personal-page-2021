@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+    Name: Chao Hsu Lin
+    Date: 10-13-2018
+    Section: CSE 154 AI
+
+    This is the decipher.html. I really enjoyed the lab and decided
+    to make an extension of the lab with more functionality
+-->
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Decipher</title>
+  <link rel="stylesheet" href="styles/decipher.css">
+  <script src="scripts/decipher-animation.js"></script>
+  <script src="scripts/decipher-options.js"></script>
+  <script src="scripts/decipher.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1 id="decipher">Decipher</h1>
+    <h2>Encrypt / Decrypt messages!</h2>
+  </header>
+  <main>
+
+    <section id="input-output">
+      <fieldset>
+        <legend>Text to Encrypt / Decrypt</legend>
+        <textarea id="input" placeholder="Input message..."></textarea>
+        <button id="encrypt-button">Encrypt</button>
+        <button id="decrypt-button">Decrypt</button>
+      </fieldset>
+      <img src="images/arrowr.png" alt="Arrow" id="arrow">
+      <fieldset>
+        <legend>Output</legend>
+        <textarea id="output"></textarea>
+        <button id="output-copy-button">Copy</button>
+        <label id="output-copy-message" class="hidden">Copied to clipboard!</label>
+      </fieldset>
+    </section>
+
+    <fieldset>
+      <legend>Encrypt Options</legend>
+
+      <div class="option-item">
+        <label>Encrypt Type: </label>
+        <select id="encrypt-type">
+          <option value="">-Choose An Encrypt Option-</option>
+          <option value="shift">Shift Cipher</option>
+          <option value="xor">XOR Cipher</option>
+          <option value="morse">Morse Code</option>
+          <option value="homophonic">Homophonic Substitution Cipher</option>
+          <option value="custom">Custom Cipher</option>
+        </select>
+      </div>
+
+      <div class="option-item">
+        <label>Unmapped Character: </label>
+        <input id="ph-text" placeholder="Original Character">
+      </div>
+
+      <div id="shift-option">
+        <p>Shift Cipher shifts an alphabet [Shift by] letters further in the alphabet.</p>
+        <div class="option-item">
+          <label>Shift by: </label>
+          <input type="number" id="shift" min="0" max="25" value="1">
+        </div>
+      </div>
+
+      <div id="xor-option">
+        <p>XOR Cipher outputs encrypted text by comparing a character's bits to the [Key].</p>
+        <div class="option-item">
+          <label>Key: </label>
+          <input type="number" id="key" value="10000">
+        </div>
+      </div>
+
+      <div id="morse-option">
+        <p>
+          Encrypt your message with the Morse code!
+          The system uses the American standard. Space is encoded as "/".
+        </p>
+      </div>
+
+      <div id="homophonic-option">
+        <p>
+          Homophonic Cipher have multiple substitutions for a character. In this project,
+          a map is generated when the [Generate New Homophonic Map] is pressed, the website
+          will use the map generated to create encrypted text. Output would be capitalized.
+        </p>
+        <div class="option-item">
+          <button id="homophonic-map-button">Generate New Homophonic Map</button>
+        </div>
+      </div>
+
+      <div id="custom-option">
+        <p>
+          Use a custom map to encrypt the message! Import a map or edit a previously generated map!
+        </p>
+      </div>
+
+      <button id="switch-button">Switch Sides</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>Text Options</legend>
+      <label>Font Size: </label>
+      <input type="number" id="font-size" value="20">
+      <br>
+      <label>Hacker Mode: </label>
+      <input type="checkbox" id="hacker-mode">
+      <br>
+      <button id="all-caps">Capitalize Input</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>Map Options</legend>
+      <div id="table-wrap">
+        <table>
+          <tr id="row-char">
+            <th id="header-char">Character</th>
+          </tr>
+          <tr id="row-sub">
+            <th id="header-sub">Substitution</th>
+          </tr>
+          <tr id="row-edit" class="hidden">
+            <th id="header-edit">
+              Edit
+              <br>
+              <input id="add-item-input" class="small-input" maxlength="1"></input>
+              <button id="add-item-button" class="small-button">Add Key</button>
+            </th>
+
+          </tr>
+        </table>
+      </div>
+      <button id="edit-map-button">Edit Map</button>
+      <button id="finish-edit-map-button">Finish Edit</button>
+      <button id="open-import-button">Import Map</button>
+      <button id="open-export-button">Export Map</button>
+    </fieldset>
+
+    <div id="overlay" class="hidden">
+    </div>
+
+    <div id="map-import-box" class="box hidden">
+      <fieldset>
+        <legend>Map Import</legend>
+        <textarea id="map-import"></textarea>
+        <button id="map-import-button">Import</button>
+        <button id="close-import-button">Cancel</button>
+      </fieldset>
+    </div>
+
+    <div id="map-export-box" class="box hidden">
+      <fieldset>
+        <legend>Map Export</legend>
+        <textarea id="map-export"></textarea>
+        <button id="map-copy-button">Copy</button>
+        <button id="close-export-button">Cancel</button>
+        <label id="map-copy-message" class="hidden">Copied to clipboard!</label>
+      </fieldset>
+    </div>
+
+  </main>
+</body>
+
+</html>
+<!--
+  (\__/)
+  (•ㅅ•)
+-->

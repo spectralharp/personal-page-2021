@@ -1,0 +1,147 @@
+/*
+  Name: Chao Hsu Lin
+  Date: 11-24-18
+  Section: CSE 154 AI
+
+  Stylesheet for cse154csslint.html
+  Wouldn't it be ironic if this stylesheet isn't linted.
+  (It's not linted)
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  background-color: #434343;
+}
+
+footer, button, h1, .output, label {
+  font-family: "Open Sans", sans-serif;
+}
+
+footer, button, h1, h2, h3, .error-type, label {
+  color: white;
+}
+
+footer, h1 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+button {
+  border: none;
+  background-color: #007BFF;
+  font-size: 1.1em;
+  min-width: 150px;
+  padding: 10px;
+  margin: 1% auto;
+  transition: background-color 0.2s;
+}
+
+button:disabled {
+  background-color: #c1a985;
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+  background-color: #ff952b;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+a:visited {
+  color: #ff952b;
+}
+
+/*
+  My resoning for this is that there's only one button on this page
+  And it's really not a big deal at all if you accidentally clicked on it
+*/
+button:focus {
+  outline: none;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category {
+  background-color: white;
+  width: 75%;
+  margin-bottom: 25px;
+}
+
+.category-header {
+  background-color: #272822;
+  padding: 10px;
+}
+
+h2 {
+  margin: 10px;
+}
+
+.error-type {
+  background-color: #17A2B8;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 4px 8px;
+  border-radius: 15px;
+  float: right;
+  font-size: 8px;
+}
+
+.result-header {
+  padding: 1px 30px;
+  border-top: 10px solid #434343;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  border-bottom: 1px solid #434343;
+  padding: 20px 30px;
+}
+
+li strong {
+  cursor: pointer;
+}
+
+li p {
+  margin: 0;
+}
+
+.pass {
+  background-color: #28A745;
+}
+
+.warning {
+  background-color: #FFC107;
+}
+
+.error {
+  background-color: #DC3545;
+}
+
+.option {
+  margin: 0 0 20px 0;
+}
+
+#editor {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  height: 600px;
+  font-size: 16px;
+}

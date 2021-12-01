@@ -1,0 +1,74 @@
+[
+    {
+        "size": "galleryFull",
+        "path": "20200621CampingSpot.jpg",
+        "name": "Camping Spot",
+        "date": "June 21, 2020"
+    },
+    {
+        "size": "galleryFull",
+        "path": "202020518Michael.png",
+        "name": "Thunderstruck",
+        "date": "May 18, 2020"
+    },
+    {
+        "size": "galleryHalf",
+        "path": "20200510Corrin.png",
+        "name": "Fateful Princess",
+        "date": "May 10, 2020"
+    },
+    {
+        "size": "galleryHalf",
+        "path": "20200506Fairy.jpg",
+        "name": "Iridescent",
+        "date": "May 6, 2020"
+    },
+    {
+        "size": "galleryHalf",
+        "path": "20200426Ria.png",
+        "name": "Star Shot",
+        "date": "April 26, 2020"
+    },
+    {
+        "size": "galleryHalf",
+        "path": "20200317Emir.jpg",
+        "name": "Morning Jog",
+        "date": "March 17, 2020"
+    },
+    {
+        "size": "galleryFull",
+        "path": "20170326Lunch.jpg",
+        "name": "Lunch",
+        "date": "March 26, 2017"
+    },
+    {
+        "size": "galleryHalf",
+        "path": "20170127Route117.png",
+        "name": "Route 117",
+        "date": "January 27, 2017"
+    },
+    {
+        "size": "galleryHalf",
+        "path": "20180121UnderArrest.jpg",
+        "name": "Under Arrest",
+        "date": "January 21, 2018"
+    },
+    {
+        "size": "galleryFull",
+        "path": "20170319Candles.jpg",
+        "name": "Candles",
+        "date": "March 19, 2017"
+    },
+    {
+        "size": "galleryHalf",
+        "path": "20161107Pillows.png",
+        "name": "Pillows",
+        "date": "November 7, 2016"
+    },
+    {
+        "size": "galleryHalf",
+        "path": "20161219Dragon.jpg",
+        "name": "Dragon",
+        "date": "December 19, 2016"
+    }
+]
